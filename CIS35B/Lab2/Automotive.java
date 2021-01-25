@@ -9,7 +9,6 @@ class Automotive {
 
 	public Automotive(String n, float b, OptionSet[] o) {
 
-		this();
 		name = n;
 		basePrice = b;
 		optionSets = o;
