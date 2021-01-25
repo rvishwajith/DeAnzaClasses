@@ -17,6 +17,16 @@ class OptionSet {
 
 
 	/* Print method */
+	public String toString() {
+
+		String returnVal = "\tOption Set: (\"" + name + "\",)";
+
+		for(int i = 0; i < options.length; i++) {
+
+			returnVal += options[i];
+		}
+		return returnVal;
+	}
 }
 
 class Option {
@@ -47,7 +57,7 @@ class Option {
 	public Option() {
 
 		name = "";
-		price = "";
+		price = 0;
 	}
 
 	/* Getter/Setter methods */
@@ -61,7 +71,7 @@ class Option {
 		name = n;
 	}
 
-	public String getPrice() {
+	public float getPrice() {
 		
 		return price;
 	}
@@ -76,9 +86,10 @@ class Option {
 
 	/* Static methods */
 
+
 	/* Print method */
 	public String toString() {
 
-		System.out.println("Option: (\"" + name + "\", " + price + ")");
+		return "\t\tOption: (\"" + name + "\", " + price + ")";
 	}
 }
